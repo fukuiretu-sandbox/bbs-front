@@ -1,7 +1,10 @@
 'use strict';
 
 import Koa from 'koa';
+import Router from 'koa-router';
+
 const app = new Koa();
+const router = Router();
 
 // アクセスログ
 app.use(async (ctx, next) => {
@@ -22,9 +25,16 @@ app.use(async (ctx, next) => {
   }
 });
 
-// レスポンスを返す
-app.use(async (ctx, next) => {
+router.get('/users/:id', function (ctx, next) {
+  ctx.body = ctx.params['id'];
+});
+
+router.get('/', function (ctx, next) {
   ctx.body = 'Hello world!';
 });
+
+
+app.use(router.routes())
+app.use(router.allowedMethods())
 
 app.listen(3005);
