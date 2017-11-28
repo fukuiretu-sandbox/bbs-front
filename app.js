@@ -2,17 +2,13 @@
 
 import Koa from 'koa';
 import Router from 'koa-router';
+import Logger from 'koa-logger';
 
 const app = new Koa();
 const router = Router();
 
-// アクセスログ
-app.use(async (ctx, next) => {
-  const start = new Date;
-  await next();
-  const ms = new Date - start;
-  console.log(`${ctx.method} ${ctx.url} - ${ms}ms`);
-});
+app.use(Logger());
+
 
 // エラーハンドリング
 app.use(async (ctx, next) => {
@@ -38,3 +34,4 @@ app.use(router.routes())
 app.use(router.allowedMethods())
 
 app.listen(3005);
+console.log('server start listen at 3005');
