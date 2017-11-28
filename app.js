@@ -1,10 +1,18 @@
 import Koa from 'koa';
 import router from './config/routes';
 import Logger from 'koa-logger';
+import views from 'koa-views';
 
 const app = new Koa();
 
 app.use(Logger());
+
+// Must be used before any router is used
+app.use(views(__dirname + '/views', {
+  map: {
+    html: 'nunjucks'
+  }
+}));
 
 // エラーハンドリング
 app.use(async (ctx, next) => {

@@ -3,8 +3,10 @@ export default class HomeController {
   }
 
   index () {
-    return (ctx, next) => {
-      ctx.body = 'Hello World!!'
+    return async (ctx, next) => {
+      await ctx.render('home/index', {
+        user: 'John'
+      });
     }
   }
 }
