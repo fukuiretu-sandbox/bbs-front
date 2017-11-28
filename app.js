@@ -1,14 +1,12 @@
 'use strict';
 
 import Koa from 'koa';
-import Router from 'koa-router';
+import router from './config/routes';
 import Logger from 'koa-logger';
 
 const app = new Koa();
-const router = Router();
 
 app.use(Logger());
-
 
 // エラーハンドリング
 app.use(async (ctx, next) => {
@@ -20,15 +18,6 @@ app.use(async (ctx, next) => {
     console.log(err);
   }
 });
-
-router.get('/users/:id', function (ctx, next) {
-  ctx.body = ctx.params['id'];
-});
-
-router.get('/', function (ctx, next) {
-  ctx.body = 'Hello world!';
-});
-
 
 app.use(router.routes())
 app.use(router.allowedMethods())
