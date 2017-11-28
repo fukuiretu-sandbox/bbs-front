@@ -1,5 +1,3 @@
-'use strict';
-
 import Koa from 'koa';
 import router from './config/routes';
 import Logger from 'koa-logger';
