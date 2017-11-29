@@ -1,12 +1,9 @@
 import Router from 'koa-router';
-import home from '../routes/home';
-import users from '../routes/users';
+import HomeController from '../controllers/home_controller';
 
 const router = Router();
-const routes = home.concat(users);
+const homeCtrl = new HomeController();
 
-routes.forEach((v) => {
-  router[v.method](v.path, v.func);
-});
+router.get('/', homeCtrl.index());
 
 export default router;

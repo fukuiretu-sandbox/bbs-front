@@ -2,10 +2,15 @@ import Koa from 'koa';
 import router from './config/routes';
 import Logger from 'koa-logger';
 import views from 'koa-views';
+import serve from 'koa-static';
 
 const app = new Koa();
 
 app.use(Logger());
+
+app.use(serve(__dirname + '/public', {
+  extensions: true
+}));
 
 // Must be used before any router is used
 app.use(views(__dirname + '/views', {
