@@ -37,3 +37,5 @@
 - [koa v2 によるAPIアプリケーションの実装例](https://dev.classmethod.jp/server-side/koa-v2-sample/)
 - [エラー定義とエラー詳細定義を分離して、エラーを読み書きしやすくする](https://dev.classmethod.jp/server-side/node-js-server-side/koa-error-json-error/)
 - [Node.jsのClusterをセットアップして、処理を並列化・高速化する](http://postd.cc/setting-up-a-node-js-cluster/)
+- [eslint-config-airbnbをサーバーサイドで使いたい
+](https://qiita.com/narikei/items/fdf09c99c1c25c052cdc)
