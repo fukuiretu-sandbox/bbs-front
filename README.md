@@ -8,8 +8,8 @@
     - [ ] protos
   - [x] テンプレートエンジン
     - [x] Nunjucks
-  - develop環境
-    - nodemon?
+  - [x] develop環境
+    - [x] nodemon
   - [ ] デバッグ方法
   - [ ] ロギング
   - [ ] エラーハンドル
@@ -39,3 +39,4 @@
 - [Node.jsのClusterをセットアップして、処理を並列化・高速化する](http://postd.cc/setting-up-a-node-js-cluster/)
 - [eslint-config-airbnbをサーバーサイドで使いたい
 ](https://qiita.com/narikei/items/fdf09c99c1c25c052cdc)
+- https://github.com/babel/example-node-server
