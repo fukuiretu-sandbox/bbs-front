@@ -13,16 +13,16 @@
   - [x] デバッグ方法
     - --inspect
     - [NiM](https://chrome.google.com/webstore/detail/nodejs-v8-inspector-manag/gnhhdgbaldcilmgcpfddgdbkhjohddkj)
-  - [ ] ロギング
+  - [x] ロギング
   - [ ] エラーハンドル
+  - [ ] gRPC
+  - [ ] 認証
+    - [ ] koa-passport
+    - [ ] jwt
   - [ ] デプロイ
   - [ ] クラスタリング
     - cluster?
     - pm2?
-  - [ ] 認証
-    - [ ] koa-passport
-    - [ ] jwt
-  - [ ] gRPC
 
 - Client
   - [ ] React

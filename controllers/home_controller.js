@@ -4,6 +4,8 @@ export default class HomeController {
 
   index () {
     return async (ctx, next) => {
+      ctx.logger.info('hogehoge');
+      
       await ctx.render('home/index', {
         user: 'John'
       });

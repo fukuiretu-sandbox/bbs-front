@@ -1,0 +1,21 @@
+{
+  "appenders": {
+    "out": {
+      "type": "stdout",
+      "layout": {
+        "type": "pattern",
+        "pattern": "[%d] [%p] : %m"
+      }
+    }
+  },
+  "categories": {
+    "default": {
+      "appenders": ["out"],
+      "level": "debug"
+    },
+    "stage": {
+      "appenders": ["out"],
+      "level": "debug"
+    }
+  }
+}

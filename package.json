@@ -6,7 +6,7 @@
   "author": "fukuiretu <fukuiretu@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "start": "nodemon --exec babel-node app.js",
+    "start": "NODE_ENV=development nodemon --exec babel-node --inspect app.js",
     "lint-for-server": "eslint ./ -c ./.eslintrc.json"
   },
   "nodemonConfig": {
@@ -23,6 +23,7 @@
     "koa-router": "^7.3.0",
     "koa-static": "^4.0.2",
     "koa-views": "^6.1.2",
+    "log4js": "^2.3.12",
     "nunjucks": "^3.0.1"
   },
   "devDependencies": {

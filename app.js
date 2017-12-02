@@ -1,12 +1,10 @@
 import Koa from 'koa';
 import router from './config/routes';
-import Logger from 'koa-logger';
+import log4js from 'log4js';
 import views from 'koa-views';
 import serve from 'koa-static';
 
 const app = new Koa();
-
-app.use(Logger());
 
 app.use(serve(__dirname + '/public', {
   extensions: true
@@ -18,6 +16,19 @@ app.use(views(__dirname + '/views', {
     html: 'nunjucks'
   }
 }));
+
+// Logger
+app.use(async (ctx, next) => {
+  log4js.configure('./config/log4js.json');
+  ctx.logger = log4js.getLogger(process.env.NODE_ENV);
+
+  ctx.logger.info('Start.')
+  ctx.logger.info(ctx.request.url)
+
+  await next();
+
+  ctx.logger.info('End.')
+});
 
 // エラーハンドリング
 app.use(async (ctx, next) => {
