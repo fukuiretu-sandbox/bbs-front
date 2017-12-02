@@ -10,7 +10,9 @@
     - [x] Nunjucks
   - [x] develop環境
     - [x] nodemon
-  - [ ] デバッグ方法
+  - [x] デバッグ方法
+    - --inspect
+    - [NiM](https://chrome.google.com/webstore/detail/nodejs-v8-inspector-manag/gnhhdgbaldcilmgcpfddgdbkhjohddkj)
   - [ ] ロギング
   - [ ] エラーハンドル
   - [ ] デプロイ
@@ -40,3 +42,4 @@
 - [eslint-config-airbnbをサーバーサイドで使いたい
 ](https://qiita.com/narikei/items/fdf09c99c1c25c052cdc)
 - https://github.com/babel/example-node-server
+- [Node.jsのパフォーマンスチューニングのtips](http://abouthiroppy.hatenablog.jp/entry/2017/11/06/095943)

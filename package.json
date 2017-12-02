@@ -9,6 +9,12 @@
     "start": "nodemon --exec babel-node app.js",
     "lint-for-server": "eslint ./ -c ./.eslintrc.json"
   },
+  "nodemonConfig": {
+    "ignore": [
+      "node_modules/*"
+    ],
+    "delay": "500"
+  },
   "dependencies": {
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-es2017": "^6.24.1",

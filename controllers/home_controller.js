@@ -5,7 +5,7 @@ export default class HomeController {
   index () {
     return async (ctx, next) => {
       await ctx.render('home/index', {
-        user: 'Retu'
+        user: 'John'
       });
     }
   }
