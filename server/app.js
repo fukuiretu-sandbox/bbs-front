@@ -7,13 +7,19 @@ import serve from 'koa-static';
 const app = new Koa();
 
 app.use(serve(__dirname + '/public', {
-  extensions: true
+  extensions: false
 }));
 
 // Must be used before any router is used
-app.use(views(__dirname + '/views', {
+app.use(views(__dirname + '/app/views', {
+  extension: 'njk',
   map: {
-    html: 'nunjucks'
+    njk: 'nunjucks'
+  },
+  options: {
+    partials: {
+      navbar: './navbar'
+    }
   }
 }));
 

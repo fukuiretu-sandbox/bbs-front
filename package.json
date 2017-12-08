@@ -6,8 +6,8 @@
   "author": "fukuiretu <fukuiretu@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "start": "NODE_ENV=development nodemon --exec babel-node --inspect app.js",
-    "lint-for-server": "eslint ./ -c ./.eslintrc.json"
+    "start": "NODE_ENV=development BABEL_ENV=server nodemon --exec babel-node --inspect ./server/app.js",
+    "lint:server": "eslint server"
   },
   "nodemonConfig": {
     "ignore": [
